@@ -1,0 +1,153 @@
+/* Zerando as margim e formatando fonte geral*/
+*{
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+/*background-color: #11a6d4;   */
+background-color: #fdfdfd;
+}
+
+/*Div externa simulando sombra e opacidade
+para que outro componentes não receba opacidade */
+#login-box{
+  background-color: #1992b7;
+  /*background-color: #cecece;*/
+  width: 380px;
+  height: 260px; 
+  margin: 240px auto 0; /* alinhar div */
+  border-radius: .5rem;
+  z-index: 1;
+}
+
+/*Div interna de login */
+#login-box-interna {
+  width: 360px;
+  height: 240px;
+  background-color: #fdfdfd;
+  position: absolute; /* alinha apartir da div mãe */
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black; /* aplica sombra */
+  overflow: hidden;
+}
+
+#login-box-label {
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  
+  height: 40px;
+  text-align: center;
+  font: bold 14px/45px sans-serif; /* alinha texto centro */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  border-bottom: 1px solid white;
+  box-shadow: 1px 0 1px black;
+
+  color: #555; 
+  text-shadow: 1px 0 1px white; /* aplica sombra letra */
+}
+
+.input-div {
+  margin: 20px;
+  padding: 5px;
+  background-color: #f2f5f7;
+  border-radius: 3px;
+}
+
+.input-div input {
+  width: 310px;
+  height: 35px;
+  padding-left: 5px;
+  font: normal 14px sans-serif;
+  color: #aeaeae;
+  border-radius: .3rem;
+  border: 1px solid #bfc3c6;
+  outline:  none; /* desabilita borda automatica do navegador */
+}
+
+/*Efeito ao passar mouse */
+.input-div:hover {
+  background-color: #e0f1fc;
+}
+
+.input-div:hover input {
+  border-color: #7dc6dd;
+}
+
+#input-senha{
+  margin-top: -10px; 
+}
+
+#button-div{
+  width:  310px;
+  margin-left: 25px;
+}
+
+#button-login{
+  float: right;
+  padding: 10px 55px;
+  font: bold 12px sans-serif;
+  border-radius: .5rem;
+  text-shadow: 0 2px 0 white;
+  border: 1px solid #9eb9c3;
+
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#edf6f9+0,cde5ee+100 */
+    background: #edf6f9; /* Old browsers */
+    background: -moz-linear-gradient(top, #edf6f9 0%, #cde5ee 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #edf6f9 0%,#cde5ee 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #edf6f9 0%,#cde5ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edf6f9', endColorstr='#cde5ee',GradientType=0 ); /* IE6-9 */
+
+ color: #527988;
+ box-shadow: 0 0 10px #c9c9c9;
+}
+
+#button-login:hover {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cde5ee+0,edf6f9+100 */
+    background: #cde5ee; /* Old browsers */
+    background: -moz-linear-gradient(top, #cde5ee 0%, #edf6f9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cde5ee 0%,#edf6f9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cde5ee 0%,#edf6f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cde5ee', endColorstr='#edf6f9',GradientType=0 ); /* IE6-9 */
+
+    cursor: pointer /* mudar ponteiro do mouse - cursor */
+}
+
+#lembar-senha{
+  font: normal 12px sans-serif;
+}
+
+#lembrar-senha input{
+  padding-left: 2rem;
+}
+
+.login-box-h1 {
+    height: 40px;
+    color: white; 
+    padding-left: 10%;
+    background-color: #007395;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font: bold 32px/40px sans-serif;
+}
+
+.login-box-p {
+    padding: 15%;
+    color: #cecece;
+    margin-left:30%;
+    font: bold 14px/35px sans-serif;
+}
+
+.login-box-a{
+  padding: 20%;
+    color: #cecece;
+    margin-left:22%;
+    font: bold 25px sans-serif;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Teste - Mttechne</title>
+  <link rel="stylesheet" href="styles/libs/devices.min.css">
+  <link rel="stylesheet" href="styles/desenvolvedor/custom.css">
+  <!--Angulare -->
+  <script src="scripts/libs/angular.min.js"></script>
+  <script src="scripts/libs/angular-route.min.js"></script>
+  <script src="scripts/libs/moment.js"></script>
+  <script src="scripts/desenvolvedor/controllerAngular.js"></script>
+</head>
+
+<body ng-app="controllerApp">
+  <div class="containner">
+
+    <!-- MENU SUPERIOr-->
+    <div class="menuSuperior bg_01">
+      <nav class="containnerAling bg-01">
+        <div class="MenuLeft">
+          <ul>
+            <li>
+              <a href="/">MTtechne</a>
+            </li>
+          </ul>
+        </div>
+        <div class="MenuRight" ng-controller="navegarApp">
+          
+          <ul>
+            <li>
+              <span ng-click="submit('login')">Login</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--END MENU SUPERIOR-->
+
+    <div ng-view >
+    </div>
+
+  </div>
+
+    <footer class="">
+      <p>&copy; 2018 - Josuel A. Lopes</p>
+    </footer>
+</body>
+
+
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+
+<!--<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>-->
+<!--<script src="app.js"></script>-->
+
+</html>
