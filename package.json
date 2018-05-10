@@ -1,0 +1,32 @@
+{
+  "name": "projectsmttechne",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josuellions/Projects_MTtechne_2018.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josuellions/Projects_MTtechne_2018/issues"
+  },
+  "homepage": "https://github.com/josuellions/Projects_MTtechne_2018#readme",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "body-parser": "^1.16.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "json": "^9.0.6",
+    "mysql": "^2.15.0",
+    "node": "^10.0.0",
+    "node-env-file": "^0.1.8",
+    "nodejs": "^4.2.6",
+    "nodemon": "^1.17.4",
+    "sax": "^1.2.4"
+  }
+}

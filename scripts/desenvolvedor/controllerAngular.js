@@ -1,3 +1,4 @@
+/* ROUTER */
 var app = angular.module('controllerApp', ['ngRoute']);
 app.config(function ($routeProvider) {
 
@@ -14,25 +15,25 @@ app.config(function ($routeProvider) {
       templateUrl: '/views/login.html',
       controller: 'loginCtrt',
     })
+    .when('/comentario', {
+      templateUrl: '/views/home.html'
+    })
     .otherwise({
-      redirectTo: '/'
+      redirectTo: '/',
     });
-
-
 });
 
+/* CONTROLLERS */
 app.controller('navegarApp', function ($scope, $location) {
   $scope.submit = function ($scope) {
     if ($scope == 'login') {
-      
+      $('MenuRight').css({'display': 'none !imporant'});
       $location.path('/login');
-      
+     
       let name = document.getElementById('input-usuario').value;
       let password = document.getElementById('input-senha').value;
 
       if (name != "" && password != "") {
-        //alert( name + "\nLogin realizado com sucesso!!!");
-
         document.getElementById('login-box-interna').style.display = "none";
         document.getElementById('login-box').innerHTML = '<h1 class="login-box-h1">Bem Vindo</h1>' +
           '<p class="login-box-p">' + name + '</p>' +
@@ -43,14 +44,36 @@ app.controller('navegarApp', function ($scope, $location) {
       }
     }
     else if ($scope == 'autenticar') {
+
       $location.path('/autenticar');
+
+    } else if ($scope == 'comentario') {
+      (function ($) {
+        $("#enviarComentario").click(function () {
+
+          var recebComentario = $("#txtComentario").val();
+          if (typeof recebComentario == "string" && recebComentario != "") {
+            document.getElementById('tabComentarios').innerHTML += '<tr><td width="20%">' + recebComentario +
+              '</td><td width="2%"><a href="" id="10" onclick="onUpdate( 10 )"><span class="glyphicon glyphicon-edit"></span></a></td>' +
+              '<td width="2%"><a href="" id=" 10" onclick="onDelete( 10 )"><span class="glyphicon glyphicon-trash"></span></a></td></tr>';
+
+              document.getElementById("txtComentario").value = "";
+              window.location.replace();
+          }
+          else {
+            alert("Campo comentário, não pode ser vazio!")
+          }
+        });
+      })(jQuery);
+
     } else {
       $location.path('/');
-      // document.location.reload(true);
+      window.location.reload();
+
     }
   }
 });
 
-app.controller('loginCtrt', function ($scope){
+app.controller('loginCtrt', function ($scope) {
 
 });

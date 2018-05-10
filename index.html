@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Teste - Mttechne</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/libs/devices.min.css">
   <link rel="stylesheet" href="styles/desenvolvedor/custom.css">
+
   <!--Angulare -->
   <script src="scripts/libs/angular.min.js"></script>
   <script src="scripts/libs/angular-route.min.js"></script>
-  <script src="scripts/libs/moment.js"></script>
-  <script src="scripts/desenvolvedor/controllerAngular.js"></script>
 </head>
 
 <body ng-app="controllerApp">
-  <div class="containner">
+  <div class="containnerCustom">
 
     <!-- MENU SUPERIOr-->
     <div class="menuSuperior bg_01">
-      <nav class="containnerAling bg-01">
+      <nav class=" containnerAling bg-01">
         <div class="MenuLeft">
           <ul>
             <li>
@@ -28,11 +28,17 @@
             </li>
           </ul>
         </div>
-        <div class="MenuRight" ng-controller="navegarApp">
-          
-          <ul>
+        <div class="MenuRight dropdown" ng-controller="navegarApp">
+
+          <ul class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             <li>
-              <span ng-click="submit('login')">Login</span>
+              <span class="glyphicon glyphicon-user" ng-click="submit('login')"> Login </span>
+            </li>
+          </ul>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li class="dropdown-item">
+              <span class=" glyphicon glyphicon-log-out" ng-click="submit('logout')"> Logout </span>
             </li>
           </ul>
         </div>
@@ -40,23 +46,19 @@
     </div>
     <!--END MENU SUPERIOR-->
 
-    <div ng-view >
+    <div ng-view>
     </div>
 
   </div>
 
-    <footer class="">
-      <p>&copy; 2018 - Josuel A. Lopes</p>
-    </footer>
+  <footer>
+    <p>&copy; 2018 - Josuel A. Lopes</p>
+  </footer>
 </body>
 
-
-<!-- Firebase -->
-<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
-<!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
-
-<!--<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>-->
-<!--<script src="app.js"></script>-->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="scripts/desenvolvedor/controllerAngular.js"></script>
+<script src="scripts/desenvolvedor/listarComentarios.js"></script>
 
 </html>

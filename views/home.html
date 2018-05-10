@@ -8,21 +8,32 @@
       <img src="img/thumb-1920-589553.png">
     </div>
     <div class="table-responsive">
-      <table>
-        <tr>
-          <td width="90%">Este é seu comentário sobre imagem</td>
-          <td width="10%">
-            <!-- <span ng-click="submit('edit')">Editar</span>-->
-            <a href="#">Editar</a>
-          </td>
-          <td width="10%">
-            <a href="#">Excluir</a>
-          </td>
-        </tr>
+      <table class="table table-striped table-hover">
+        <tbody id="tabComentarios">
+          <tr id="tbExemplo">
+            <td width="20%">Este é um comentário sobre imagem</td>
+            <td width="2%">
+              <!-- <span ng-click="submit('edit')">Editar</span>-->
+              <a href="#">
+                <span class="glyphicon glyphicon-edit"></span>
+              </a>
+            </td>
+            <td width="2%">
+              <a href="#">
+                <span class="glyphicon glyphicon-trash"></span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
+    <div id="divComentario">
+      <textarea name="TextComentario" id="txtComentario" wrap="hard" placeholder="Digite aqui seu comentário sobre imagem"></textarea>
+      <br>
+      <div id="lembrar-senha">
+        <button name="enviarComentario" id="enviarComentario" ng-click="submit('comentario')">Comentar</button>
+      </div>
 
-    <textarea name="" id="" wrap="hard" placeholder="Digite aqui seu comentário sobre imagem"></textarea>
-    <br>
-    <button type="submit">Comentar</button>
-</div>
+      <script src="scripts/desenvolvedor/enviarComentario.js"></script>
+
+    </div>

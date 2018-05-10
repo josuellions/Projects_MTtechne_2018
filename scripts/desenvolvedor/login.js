@@ -4,7 +4,6 @@ document.getElementById('button-login').onclick = () => {
   let password = document.getElementById( 'input-senha').value;
 
   if( name != "" && password != "") {
-    //alert( name + "\nLogin realizado com sucesso!!!");
 
     document.getElementById('login-box-interna' ).style.display = "none";
     document.getElementById('login-box').innerHTML = '<h1")>Bem Vindo</h1>' +
