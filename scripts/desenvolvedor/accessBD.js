@@ -4,10 +4,10 @@ var mysql = require('mysql');
 
 var connection = mysql.createConnection({
   //properties
-  host: 'seu servidor bd',
-  user: 'urer',
-  password: '######',
-  database: 'banco'
+  host: 'servidor',
+  user: 'user',
+  password: '******',
+  database: 'banco dados'
 });
 
 var app = express();
@@ -23,7 +23,7 @@ connection.connect(function (error){
 
 app.get('/index', function(req, res){
   // about mysql
-  connection.query("SELECT * FROM ent_desp;", function(error, rows, fields) {
+  connection.query("SELECT * FROM table;", function(error, rows, fields) {
     if(!error){
       console.log('Successfull query!\n', res.json(rows));
     }else{
@@ -33,7 +33,7 @@ app.get('/index', function(req, res){
 });
 
 app.get('/home', function (req, res){
-  var sql = 'SELECT * FROM `ent_desp`;';
+  var sql = 'SELECT * FROM table;';
   connection.query(sql, function (err, rows, fields) {
     if(err){
       res.json({ 'Error': 'Erro ao listar os dados na tabela', 'sql': sql });
@@ -46,7 +46,7 @@ app.get('/home', function (req, res){
 
 /*SELECT LOGIN */
 app.get('/login', function (req, res) {
-  var sql = 'SELECT * FROM `usuarios`;';
+  var sql = 'SELECT * FROM table;';
   connection.query(sql, function (err, rows, fields) {
     if (err) {
       res.json({ 'Error': 'Erro ao listar os dados na tabela', 'sql': sql });
