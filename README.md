@@ -58,14 +58,6 @@ Fone: 11 98273-8274
     Hospedagem -AWS
     Deployment
 
-
-
-
-
-
-
-
-
     #Estrutura
     *\ project
         |-> img => repositório das imagens usadas no projeto
