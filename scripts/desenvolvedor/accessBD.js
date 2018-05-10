@@ -4,10 +4,10 @@ var mysql = require('mysql');
 
 var connection = mysql.createConnection({
   //properties
-  host: 'localhost',
-  user: 'root',
-  password: '123456',
-  database: 'despesas'
+  host: 'seu servidor bd',
+  user: 'urer',
+  password: '######',
+  database: 'banco'
 });
 
 var app = express();
