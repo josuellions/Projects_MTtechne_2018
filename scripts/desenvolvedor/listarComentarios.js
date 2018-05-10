@@ -4,7 +4,7 @@ jQuery.support.cors = true;
 
   var settings = {
     "crossDomanin": true,
-    "url": "http://21.21.21.5:3000/home/",
+    "url": "http://server:3000/home/",
     "method" : "GET",
     "headers" : {
       "content-type": "application/x-www-form-urlencoded",

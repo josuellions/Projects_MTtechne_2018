@@ -4,9 +4,9 @@ var mysql = require('mysql');
 
 var connection = mysql.createConnection({
   //properties
-  host: 'servidor',
+  host: 'server',
   user: 'user',
-  password: '******',
+  password: '*****',
   database: 'banco dados'
 });
 
@@ -25,13 +25,14 @@ app.get('/index', function(req, res){
   // about mysql
   connection.query("SELECT * FROM table;", function(error, rows, fields) {
     if(!error){
-      console.log('Successfull query!\n', res.json(rows));
+      console.log('Successfull query!\n');
+      console.log( res.json(rows));
     }else{
       console.log('Error in the query!', error);
     }
   });
 });
-
+console.log("aqui");
 app.get('/home', function (req, res){
   var sql = 'SELECT * FROM table;';
   connection.query(sql, function (err, rows, fields) {

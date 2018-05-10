@@ -6,13 +6,13 @@ app.config(function ($routeProvider) {
 
   $routeProvider
     .when('/', {
-      templateUrl: '/views/home.html'
+      templateUrl: 'views/home.html'
     })
     .when('/login', {
-      templateUrl: '/views/login.html',
+      templateUrl: 'views/login.html',
     })
     .when('/autenticar', {
-      templateUrl: '/views/login.html',
+      templateUrl: 'views/login.html',
       controller: 'loginCtrt',
     })
     .when('/comentario', {
@@ -28,7 +28,7 @@ app.controller('navegarApp', function ($scope, $location) {
   $scope.submit = function ($scope) {
     if ($scope == 'login') {
       $('MenuRight').css({'display': 'none !imporant'});
-      $location.path('/login');
+      $location.path('login');
      
       let name = document.getElementById('input-usuario').value;
       let password = document.getElementById('input-senha').value;
@@ -40,7 +40,7 @@ app.controller('navegarApp', function ($scope, $location) {
           '<a class="login-box-a" href="../index.html">Home</a>';
       } else {
         alert("\nUsuário e senha devem ser informados corretamente!!! ");
-        $location.path('/login');
+        $location.path('login');
       }
     }
     else if ($scope == 'autenticar') {

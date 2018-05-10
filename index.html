@@ -6,15 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Teste - Mttechne</title>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/libs/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/libs/devices.min.css">
   <link rel="stylesheet" href="styles/desenvolvedor/custom.css">
 
   <!--Angulare -->
-  <script src="scripts/libs/angular.min.js"></script>
-  <script src="scripts/libs/angular-route.min.js"></script>
+  <script src="scripts/libs/angular/angular.min.js"></script>
+  <script src="scripts/libs/angular/angular-route.min.js"></script>
 </head>
-
 <body ng-app="controllerApp">
   <div class="containnerCustom">
 
@@ -29,7 +28,6 @@
           </ul>
         </div>
         <div class="MenuRight dropdown" ng-controller="navegarApp">
-
           <ul class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <li>
@@ -45,19 +43,16 @@
       </nav>
     </div>
     <!--END MENU SUPERIOR-->
-
-    <div ng-view>
-    </div>
-
+    
+    <div ng-view></div>
   </div>
-
   <footer>
     <p>&copy; 2018 - Josuel A. Lopes</p>
   </footer>
 </body>
 
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="scripts/libs/jquery/jquery-3.2.1.min.js"></script> 
+<script src="styles/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="scripts/desenvolvedor/controllerAngular.js"></script>
 <script src="scripts/desenvolvedor/listarComentarios.js"></script>
 

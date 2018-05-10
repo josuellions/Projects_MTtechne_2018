@@ -1,3 +1,16 @@
+/*
+1 - General
+2 - Headers
+3 - Menus
+4 - Textos e Titulos
+5 - Colors e backgrounds
+6 - Card
+
+*/
+
+
+/* 1 - General*/
+
 /* Zerando as margim e formatando fonte geral*/
 *{
   margin: 0;
@@ -13,18 +26,12 @@ background-color: #fdfdfd;
 para que outro componentes não receba opacidade */
 #login-box{
   background-color: #1992b7;
-  /*background-color: #cecece;*/
-  width: 380px;
-  height: 260px; 
-  margin: 240px auto 0; /* alinhar div */
   border-radius: .5rem;
   z-index: 1;
 }
 
 /*Div interna de login */
 #login-box-interna {
-  width: 360px;
-  height: 240px;
   background-color: #fdfdfd;
   position: absolute; /* alinha apartir da div mãe */
   margin: 10px;
@@ -62,7 +69,6 @@ para que outro componentes não receba opacidade */
 }
 
 .input-div input {
-  width: 310px;
   height: 35px;
   padding-left: 5px;
   font: normal 14px sans-serif;
@@ -86,7 +92,6 @@ para que outro componentes não receba opacidade */
 }
 
 #button-div{
-  width:  310px;
   margin-left: 25px;
 }
 
@@ -150,4 +155,58 @@ para que outro componentes não receba opacidade */
     color: #cecece;
     margin-left:22%;
     font: bold 25px sans-serif;
+}
+
+/*CELULAR*/
+@media (max-width: 780px) {
+  #login-box{
+  width: 350px;
+  height: 250px; 
+  margin: 120px auto 0; /* alinhar div */
+  }
+
+  #login-box-interna {
+  width: 330px;
+  height: 230px;
+  }
+.input-div input {
+  width: 280px;
+}
+  #button-div{
+  width:  280px;
+  }
+
+}
+
+/*Tablet*/
+@media (max-width: 780px) and (min-width: 411px) {
+   
+
+}
+
+/*tablet deitado, ou desktops pequenos*/
+@media (max-width: 1024px) and (min-width: 779px) {
+
+}
+
+/*grande resolucoes*/
+@media (min-width: 1024px) {
+  #login-box{
+    width: 380px;
+    height: 260px; 
+    margin: 240px auto 0; /* alinhar div */
+  }
+
+  #login-box-interna {
+    width: 360px;
+    height: 240px;
+  }
+
+.input-div input {
+   width: 310px;
+  }
+  #button-div{
+    width:  310px;
+  }
+
 }
