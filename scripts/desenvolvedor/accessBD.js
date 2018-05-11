@@ -1,17 +1,16 @@
 var express = require('express');
 var mysql = require('mysql');
-//var bodyParser = require('body-parser');
 
 var connection = mysql.createConnection({
   //properties
   host: 'server',
   user: 'user',
-  password: '*****',
+  password: '******',
   database: 'banco dados'
 });
 
 var app = express();
-//app.use(bodyParser.urlencoded({ extended: false }));
+
 
 connection.connect(function (error){
   if(!error){
@@ -21,37 +20,18 @@ connection.connect(function (error){
   }
 });
 
-app.get('/index', function(req, res){
-  // about mysql
-  connection.query("SELECT * FROM table;", function(error, rows, fields) {
-    if(!error){
-      console.log('Successfull query!\n');
-      console.log( res.json(rows));
-    }else{
-      console.log('Error in the query!', error);
-    }
-  });
-});
-console.log("aqui");
-app.get('/home', function (req, res){
-  var sql = 'SELECT * FROM table;';
-  connection.query(sql, function (err, rows, fields) {
-    if(err){
-      res.json({ 'Error': 'Erro ao listar os dados na tabela', 'sql': sql });
-    }else{
-      res.json(rows);
-    }
-  });
-  return sql;
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
 });
 
-/*SELECT LOGIN */
-app.get('/login', function (req, res) {
-  var sql = 'SELECT * FROM table;';
+app.get('/home', function (req, res){
+  var sql = 'SELECT * FROM `table`;';
   connection.query(sql, function (err, rows, fields) {
-    if (err) {
-      res.json({ 'Error': 'Erro ao listar os dados na tabela', 'sql': sql });
-    } else {
+    if(err){
+      res.json({ 'Error': 'Erro ao listar os dados na tabela' });
+    }else{
       res.json(rows);
     }
   });

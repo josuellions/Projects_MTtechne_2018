@@ -14,16 +14,17 @@
   <script src="scripts/libs/angular/angular.min.js"></script>
   <script src="scripts/libs/angular/angular-route.min.js"></script>
 </head>
+
 <body ng-app="controllerApp">
   <div class="containnerCustom">
 
     <!-- MENU SUPERIOr-->
     <div class="menuSuperior bg_01">
       <nav class=" containnerAling bg-01">
-        <div class="MenuLeft">
+        <div class="MenuLeft" ng-controller="navegarApp">
           <ul>
             <li>
-              <a href="/">MTtechne</a>
+              <a ng-click="submit('/')">MTtechne</a>
             </li>
           </ul>
         </div>
@@ -43,7 +44,7 @@
       </nav>
     </div>
     <!--END MENU SUPERIOR-->
-    
+
     <div ng-view></div>
   </div>
   <footer>
@@ -51,9 +52,8 @@
   </footer>
 </body>
 
-<script src="scripts/libs/jquery/jquery-3.2.1.min.js"></script> 
+<script src="scripts/libs/jquery/jquery-3.2.1.min.js"></script>
 <script src="styles/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="scripts/desenvolvedor/controllerAngular.js"></script>
-<script src="scripts/desenvolvedor/listarComentarios.js"></script>
 
 </html>

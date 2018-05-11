@@ -12,17 +12,17 @@ jQuery.support.cors = true;
     }
   }
 
-  $('tbody > #tabComentarios').html('');
-
   $.ajax(settings).done(function (response){
+    if (!response['Error']) {
+      document.getElementById('tbExemplo').style.display = 'none';
+    
     $.each(response, function(id, value){
+        
       document.getElementById('tabComentarios').innerHTML += '<tr><td width="20%">' + value.despesa_ent + 
         '</td><td width="2%"><a href="" id=" ' + id + ' "onclick="onUpdate( ' + id + ' )"><span class="glyphicon glyphicon-edit"></span></a></td>' +
-             '<td width="2%"><a href="" id=" ' + id + ' "onclick="onDelete( ' + id + ' )"><span class="glyphicon glyphicon-trash"></span></a></td></tr>';
-      document.getElementById('tbExemplo').style.display = 'none';
-     
-    });
-
+            '<td width="2%"><a href="" id=" ' + id + ' "onclick="onDelete( ' + id + ' )"><span class="glyphicon glyphicon-trash"></span></a></td></tr>';
+      });
+    }
   });
   
 })(jQuery);

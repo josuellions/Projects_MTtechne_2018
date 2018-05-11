@@ -1,19 +1,19 @@
 <!--VIEW HOME-->
 <div class="containnerAling" ng-controller="navegarApp">
   <h1>Teste Developer - MTtechne</h1>
-  <hr>
+  <hr />
   <!--  <div class="menuSuperiorAling">-->
   <h2>Comentário</h1>
     <div class="img">
       <img src="img/thumb-1920-589553.png">
     </div>
-    <div class="table-responsive">
+
+    <div class="table-responsive" ng-controller="listComentario as vm">
       <table class="table table-striped table-hover">
         <tbody id="tabComentarios">
           <tr id="tbExemplo">
             <td width="20%">Este é um comentário sobre imagem</td>
             <td width="2%">
-              <!-- <span ng-click="submit('edit')">Editar</span>-->
               <a href="#">
                 <span class="glyphicon glyphicon-edit"></span>
               </a>
@@ -24,16 +24,24 @@
               </a>
             </td>
           </tr>
+          <tr ng-repeat="team in vm.teams">
+            <td width="20%">{{team.despesa_ent}}</td>
+            <td width="2%">
+              <a ng-href="{{team.id_cod}}" >
+                <span class="glyphicon glyphicon-edit iconEdit"></span>
+              </a>
+            </td>
+            <td width="2%">
+              <a ng-href="{{team.id_cod}}">
+                <span class="glyphicon glyphicon-trash iconExcluir"></span>
+              </a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
-    <div id="divComentario">
+    <form id="divComentario">
       <textarea name="TextComentario" id="txtComentario" wrap="hard" placeholder="Digite aqui seu comentário sobre imagem"></textarea>
-      <br>
-      <div id="lembrar-senha">
-        <button name="enviarComentario" id="enviarComentario" ng-click="submit('comentario')">Comentar</button>
-      </div>
-
-      <script src="scripts/desenvolvedor/enviarComentario.js"></script>
-
-    </div>
+      <button name="enviarComentario" id="enviarComentario" ng-click="submit('comentario')">Comentar</button>
+    </form>
+</div>

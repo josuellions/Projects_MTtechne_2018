@@ -6,7 +6,8 @@ app.config(function ($routeProvider) {
 
   $routeProvider
     .when('/', {
-      templateUrl: 'views/home.html'
+      templateUrl: 'views/home.html',
+      controller: 'loginCtrt'
     })
     .when('/login', {
       templateUrl: 'views/login.html',
@@ -48,32 +49,41 @@ app.controller('navegarApp', function ($scope, $location) {
       $location.path('/autenticar');
 
     } else if ($scope == 'comentario') {
-      (function ($) {
-        $("#enviarComentario").click(function () {
 
-          var recebComentario = $("#txtComentario").val();
-          if (typeof recebComentario == "string" && recebComentario != "") {
-            document.getElementById('tabComentarios').innerHTML += '<tr><td width="20%">' + recebComentario +
-              '</td><td width="2%"><a href="" id="10" onclick="onUpdate( 10 )"><span class="glyphicon glyphicon-edit"></span></a></td>' +
-              '<td width="2%"><a href="" id=" 10" onclick="onDelete( 10 )"><span class="glyphicon glyphicon-trash"></span></a></td></tr>';
+      var recebComentario = $("#txtComentario").val();
 
-              document.getElementById("txtComentario").value = "";
-              window.location.replace();
-          }
-          else {
-            alert("Campo comentário, não pode ser vazio!")
-          }
-        });
-      })(jQuery);
+      if (typeof recebComentario == "string" && recebComentario != "") {
+        document.getElementById('tabComentarios').innerHTML += '<tr><td width="20%">' + recebComentario +
+          '</td><td width="2%"><a href="" id="10" onclick="onUpdate( 10 )"><span class="glyphicon glyphicon-edit iconEdit""></span></a></td>' +
+          '<td width="2%"><a href="" id=" 10" onclick="onDelete( 10 )"><span class="glyphicon glyphicon-trash iconExcluir"></span></a></td></tr>';
 
-    } else {
+        $("#txtComentario").val("");
+        $('#tbExemplo').css({ 'display': 'none' });
+      }
+      else {
+        alert("Campo comentário, não pode ser vazio!")
+      }
+    }  else {
       $location.path('/');
-      window.location.reload();
-
     }
   }
 });
 
 app.controller('loginCtrt', function ($scope) {
-
 });
+
+app.controller('listComentario',['$scope', '$http', function($scope, $http) {
+
+  var vm = this;
+
+  $scope.users;
+  var baseUrl = 'http://server:3000/home/';
+  
+  $http.get(baseUrl).then(function (response) {
+    vm.teams = response.data;
+    $('#tbExemplo').css({ 'display': 'none' });
+  }, function (err) {
+    console.log(err);
+  });
+
+}]);

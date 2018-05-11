@@ -70,6 +70,10 @@ a {
   
 }
 
+.MenuLeft a{
+  cursor: pointer /* mudar ponteiro do mouse - cursor */
+}
+
 .MenuRight{
   float: right;
   padding: 1.5%;
@@ -104,6 +108,18 @@ table {
 
 table tbody tr td {
   padding: 1%;;
+}
+
+table tbody tr td a span {
+     margin: auto 35%;
+}
+
+.iconEdit {
+  color: #007395;
+}
+
+.iconExcluir{
+  color: orangered;
 }
 
 textarea{
@@ -218,7 +234,7 @@ footer p {
     overflow: auto;
     
   }
-
+ 
   textarea{
     width: 75vw;
     max-width: 75vw;
@@ -238,9 +254,10 @@ table {
   }
 
   button{
-    margin-top: -10.5%;
+    margin-top: .1%;
     padding: 1.2vh 1.2vw;
   }
+
 }
 
 /*Tablet*/
@@ -310,9 +327,8 @@ table {
   }
 
   button{
-    margin-top: -4.5%;
-    padding: 10px 55px;
-    margin-right: 1%;
+    padding: 1.5vh 3.5vw;
+    margin: .2vh 0 1vh 0;
   }
 
 }
