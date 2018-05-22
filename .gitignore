@@ -1,0 +1,7 @@
+.gitignore
+node_modules
+node_modules_old
+teste.js
+enviarComentario.js
+listarComentarios.js
+controllerAngular_bkp.js
