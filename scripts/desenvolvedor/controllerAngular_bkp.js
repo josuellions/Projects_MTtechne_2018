@@ -171,9 +171,6 @@ app.controller('navegarApp', function ($routeParams, $scope, $location, $http) {
   }
 });
 
-
-
-
 app.controller('loginCtrt', function ($scope) {
 });
 

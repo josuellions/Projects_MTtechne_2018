@@ -1,7 +1,8 @@
 .gitignore
-node_modules
-node_modules_old
-teste.js
-enviarComentario.js
-listarComentarios.js
-controllerAngular_bkp.js
+/node_modules
+/node_modules_old
+
+/scripts/desenvolvedor/teste.js
+/scripts/desenvolvedor/enviarComentario.js
+/scripts/desenvolvedor/listarComentarios.js
+/scripts/desenvolvedor/controllerAngular_bkp.js
