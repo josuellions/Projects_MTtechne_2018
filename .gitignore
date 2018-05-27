@@ -1,6 +1,5 @@
 .gitignore
-/node_modules
-/node_modules_old
+node_modules
 
 /scripts/desenvolvedor/teste.js
 /scripts/desenvolvedor/enviarComentario.js

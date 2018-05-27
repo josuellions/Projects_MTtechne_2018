@@ -6,8 +6,8 @@ var bodyParser = require('body-parser');
 var connection = mysql.createConnection({
   //properties
   host: 'localhost',
-  user: 'root',
-  password: '123456',
+  user: 'user',
+  password: '******',
   database: 'bd_comentarios'
 });
 
@@ -23,19 +23,7 @@ connection.connect(function (error) {
   if (!error) {
     console.log('Success is Conected!');
 
-
     //HABILITA REQUEST DE PAGINA
-    //app.use(function (req, res, next) {
-    // res.header("Access-Control-Allow-Origin", "*");
-    //  res.header("Access-Control-Allow-Credentials", "true");
-    //  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    // res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-    //res.header("Access-Control-Allow-Origin", "*");
-    //res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Headers")
-    //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    //  next();
-    // });
-
     app.use(function (req, res, next) {
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");

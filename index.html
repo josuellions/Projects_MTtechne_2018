@@ -32,12 +32,12 @@
           <ul class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <li>
-              <span class="glyphicon glyphicon-user" ng-click="submit('login')"> Login </span>
+              <span class="glyphicon glyphicon-user" id="login" ng-click="submit('login')"> Login </span>
             </li>
           </ul>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownLogout">
             <li class="dropdown-item">
-              <span class=" glyphicon glyphicon-log-out" ng-click="submit('logout')"> Logout </span>
+              <span class=" glyphicon glyphicon-log-out" id="logout" ng-click="submit('logout')"> Logout </span>
             </li>
           </ul>
         </div>

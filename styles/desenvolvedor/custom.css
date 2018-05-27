@@ -131,6 +131,14 @@ textarea{
   max-height: 5vh;
 }
 
+#salvarComentario{
+  display: none;
+}
+
+#dropdownLogout{
+ /* display: none ;*/
+}
+
 button{
   float: right;
   margin-right: 1%;
