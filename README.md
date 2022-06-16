@@ -1,7 +1,7 @@
 # Projects_MTtechne_2018
 
 Desenvolvedor / Programador : Josuel A. Lopes
-Fone: 11 98273-8274
+Contato: 11 98273-8274
 
   "name": "projectsmttechne",
   "version": "1.0.0",
