@@ -1,8 +1,8 @@
 # Projects_MTtechne_2018
 
-Desenvolvedor / Programador : Josuel A. Lopes
-Contato: 11 98273-8274
-
+#### Desenvolvedor / Programador : Josuel A. Lopes
+#### Contato: 11 98273-8274
+`
   "name": "projectsmttechne",
   "version": "1.0.0",
   "description": "",
@@ -34,7 +34,7 @@ Contato: 11 98273-8274
     "sax": "^1.2.4"
     "bootstrap": "^3.3.7"
     "jQuery": "^3.3.1"
-
+`
     # Ferramentas utilizadas
     npm => controle e versionamento de dependências
     nodemon =>  servidor local desenvolvimento para conexão banco dados
